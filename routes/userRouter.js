@@ -25,7 +25,7 @@ router.post("/login", (req, res, next) => {
         "error_msg",
         "Your trail period has expired. Contact us to buy the product"
       );
-      res.redirect("/users/login");
+      return res.redirect("/users/login");
     }
 
     req.logIn(user, function (err) {
